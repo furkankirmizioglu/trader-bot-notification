@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "905174590925",
+    "project_id": "traderbot-notification",
+    "storage_bucket": "traderbot-notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905174590925:android:04097fb97e3d138bf01084",
+        "android_client_info": {
+          "package_name": "com.example.traderbotnotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905174590925-rdiqv1k2qgimfmk7rlsirfi810h2k0kn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkSJzgHECVIXT3lAfRahmCeL8yxUWGzw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905174590925-rdiqv1k2qgimfmk7rlsirfi810h2k0kn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
