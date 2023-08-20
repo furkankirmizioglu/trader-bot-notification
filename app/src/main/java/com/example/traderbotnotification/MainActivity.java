@@ -19,21 +19,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(task -> {
-                    if (!task.isSuccessful()) {
-                        Log.w(TAG, "Fetching FCM registration token failed", task.getException());
-                        return;
-                    }
 
-                    // Get new FCM registration token
-                    String token = task.getResult();
+        FirebaseMessaging.getInstance().subscribeToTopic("TraderBot").addOnCompleteListener(task -> {
 
-                    // Log and toast
-                    String msg = "YOUR TOKEN IS: " + token;
-                    Log.d(TAG, msg);
-                    Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
-                });
+            String msg = "Subscribed to TraderBot notification channel.";
+            if (!task.isSuccessful()) {
+                Log.w(TAG, "Subscribe to TraderBot notification channel has failed.", task.getException());
+                return;
+            }
 
+            Log.e(TAG, msg);
+            Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+        });
     }
 }
